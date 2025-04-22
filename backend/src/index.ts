@@ -7,11 +7,12 @@ import express from "express";
 import bodyParser from "body-parser";
 
 import ClientController from "./controller/ClientController";
+import InvoiceController from "./controller/InvoiceController";
 
 
 const app = createExpressServer({
     cors: true,
-    controllers: [ClientController],
+    controllers: [ClientController, InvoiceController],
     routePrefix: "/api",
     defaultErrorHandler: true
 });

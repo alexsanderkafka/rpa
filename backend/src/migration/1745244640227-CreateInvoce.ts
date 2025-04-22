@@ -9,7 +9,7 @@ export class CreateInvoce1745244640227 implements MigrationInterface {
                 amount float NOT NULL,
                 issue_date DATE NOT NULL,
                 status VARCHAR NOT NULL,
-                payment_date DATE,
+                due_date DATE,
                 description VARCHAR,
                 payment_method VARCHAR CHECK (payment_method IN ('PIX', 'BOLETO', 'CREDIT_CARD', 'TRANSFER')),
                 barcode VARCHAR,

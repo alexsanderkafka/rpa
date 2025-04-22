@@ -1,11 +1,11 @@
-nome_completo,cpf/cnpj,agencia,numero_da_conta,email,telefone
-Ana Beatriz Souza,123.456.789-00,1234,00012345,ana.souza@email.com,(11) 91234-5678
-Carlos Henrique Silva,987.654.321-00,4321,00123456,carlos.hsilva@email.com,(21) 99876-5432
-Mariana Oliveira,111.222.333-44,5678,01234567,mariana.oliveira@email.com,(31) 98765-4321
-Lucas Pereira,555.666.777-88,8765,12345678,lucas.pereira@email.com,(41) 97654-3210
-Fernanda Lima,999.888.777-66,3456,23456789,fernanda.lima@email.com,(51) 96543-2109
-João Vitor Almeida,333.444.555-66,6543,34567890,joao.v.almeida@email.com,(61) 95432-1098
-Patrícia Costa,777.888.999-00,7890,45678901,patricia.costa@email.com,(71) 94321-0987
-Rafael Martins,222.333.444-55,0987,56789012,rafael.martins@email.com,(81) 93210-9876
-Camila Fernandes,666.777.888-99,1122,67890123,camila.fernandes@email.com,(91) 92109-8765
-Bruno Rocha,444.555.666-77,2211,78901234,bruno.rocha@email.com,(85) 91098-7654
+nome_completo,cpf/cnpj,agencia,numero_da_conta,email,telefone,valor_a_pagar
+Ana Beatriz Souza,123.456.789-00,1234,00012345,ana.souza@email.com,(11) 91234-5678, 500.00
+Carlos Henrique Silva,987.654.321-00,4321,00123456,carlos.hsilva@email.com,(21) 99876-5432, 1.500
+Mariana Oliveira,111.222.333-44,5678,01234567,mariana.oliveira@email.com,(31) 98765-4321, 200.00
+Lucas Pereira,555.666.777-88,8765,12345678,lucas.pereira@email.com,(41) 97654-3210, 300.00
+Fernanda Lima,999.888.777-66,3456,23456789,fernanda.lima@email.com,(51) 96543-2109, 400.00
+João Vitor Almeida,333.444.555-66,6543,34567890,joao.v.almeida@email.com,(61) 95432-1098, 500.00
+Patrícia Costa,777.888.999-00,7890,45678901,patricia.costa@email.com,(71) 94321-0987, 600.00
+Rafael Martins,222.333.444-55,0987,56789012,rafael.martins@email.com,(81) 93210-9876, 700.00
+Camila Fernandes,666.777.888-99,1122,67890123,camila.fernandes@email.com,(91) 92109-8765, 800.00
+Bruno Rocha,444.555.666-77,2211,78901234,bruno.rocha@email.com,(85) 91098-7654, 900.00

@@ -5,7 +5,7 @@ import Client from "./Client";
 export default class Invoice{
     
     @PrimaryGeneratedColumn()
-    public id?: string;
+    public id?: number;
 
     @Column("varchar", { nullable: false})
     public amount: number;
@@ -16,8 +16,8 @@ export default class Invoice{
     @Column("varchar", { nullable: false })
     public status: 'PENDING' | 'PAID' | 'CANCELLED' | 'OVERDUE';
 
-    @Column("date", { nullable: false, name: "payment_date"})
-    public paymentDate?: Date;
+    @Column("date", { nullable: false, name: "due_date"})
+    public dueDate?: Date;
 
     @Column("varchar", { nullable: false })
     public description?: string;
@@ -37,7 +37,7 @@ export default class Invoice{
         issueDate: Date,
         status: 'PENDING' | 'PAID' | 'CANCELLED' | 'OVERDUE',
         client: Client,
-        paymentDate?: Date | undefined,
+        dueDate?: Date | undefined,
         description?: string | undefined,
         paymentMethod?: 'PIX' | 'BOLETO' | 'CREDIT_CARD' | 'TRANSFER',
         barcode?: string | undefined
@@ -45,7 +45,7 @@ export default class Invoice{
         this.amount = amount;
         this.issueDate = issueDate;
         this.status = status;
-        this.paymentDate = paymentDate;
+        this.dueDate = dueDate;
         this.description = description;
         this.paymentMethod = paymentMethod;
         this.barcode = barcode;

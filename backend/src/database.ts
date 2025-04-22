@@ -3,7 +3,7 @@ import { DataSource } from 'typeorm';
 import Client from './entity/Client';
 import { CreateClient1745243699735 } from './migration/1745243699735-CreateClient';
 import { CreateInvoce1745244640227 } from './migration/1745244640227-CreateInvoce';
-import Invoice from './entity/Invoce';
+import Invoice from './entity/Invoice';
 
 export const MysqlDataSource = new DataSource({
     type: 'mysql',

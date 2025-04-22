@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import theme from '../../theme';
 
 export const Container = styled.div`
-  max-width: 40%;
+  max-width: 100%;
   margin: 70px auto;
   padding: 24px;
-  background: #fff;
+  background: ${theme.background.tertiary};
   border-radius: 8px;
   box-shadow: 0 2px 8px ${theme.shadow.primary};
-
+  height: auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Form = styled.form`
@@ -27,7 +29,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   padding: 10px;
   background: ${theme.background.primary};
-  color: #fff;
+  color: ${theme.textColor.secondary};
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -62,4 +64,50 @@ export const AccountRow = styled.div`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
+`
+
+export const TableContainer = styled.div`
+  max-width: auto;
+  margin: 0 auto 70px auto;
+  background: ${theme.background.tertiary};
+  border-radius: 8px;
+  box-shadow: 0 2px 8px ${theme.shadow.primary};
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+`
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  background-color: ${theme.background.tertiary};
+  border-radius: 8px;
+  overflow: hidden;
+`
+
+export const TableHeader = styled.th`
+  background-color: ${theme.background.primary};
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+`;
+
+export const TableRow = styled.tr`
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+`;
+
+export const TableCell = styled.td`
+  padding: 12px;
+  border: 1px solid #ddd;
+`;
+
+export const BaseContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
