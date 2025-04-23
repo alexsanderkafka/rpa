@@ -58,6 +58,7 @@ def fill_forms(row: pd.Series):
 
 
 for index, row in df.iterrows():
+    print("\n---------------")
     print(row['nome_completo'])
     print(row['cpf/cnpj'])
     print(row['agencia'])
@@ -65,7 +66,7 @@ for index, row in df.iterrows():
     print(row['email'])
     print(row['telefone'])
     print(row['valor_a_pagar'])
-    print("---")
+    print("---------------\n")
 
     fill_forms(row)
 
