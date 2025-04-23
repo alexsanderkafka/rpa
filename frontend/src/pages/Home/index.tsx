@@ -71,45 +71,7 @@ function Home(): React.ReactElement {
 
   // Regex para CPF (com ou sem máscara) e CNPJ (com ou sem máscara)
   const cpfCnpjPattern = /^(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2})$/;
-
-  /*
-  const data = [
-    {
-      id: 1,
-      nome: 'Alex Pereira',
-      cpf: '123.456.789-00',
-      valor: 'R$ 250,00',
-      dataVencimento: '2025-04-30',
-      status: 'Pago',
-      dataPagamento: '2025-04-15',
-      metodoPagamento: 'Cartão de Crédito',
-      codigoDeBarra: '23793381286000000012345678900001234567890000',
-    },
-    {
-      id: 2,
-      nome: 'Mariana Souza',
-      cpf: '987.654.321-00',
-      valor: 'R$ 150,00',
-      dataVencimento: '2025-05-10',
-      status: 'Em aberto',
-      dataPagamento: '',
-      metodoPagamento: '',
-      codigoDeBarra: '23793381286000000009876543210009876543210000',
-    },
-    {
-      id: 3,
-      nome: 'Carlos Lima',
-      cpf: '111.222.333-44',
-      valor: 'R$ 300,00',
-      dataVencimento: '2025-04-25',
-      status: 'Pago',
-      dataPagamento: '2025-04-20',
-      metodoPagamento: 'Pix',
-      codigoDeBarra: '23793381286000000001112223334445556667778888',
-    },
-  ];*/
   
-
   return (
     <BaseContainer>
       <Container>
@@ -215,7 +177,7 @@ function Home(): React.ReactElement {
         <Table>
           <thead>
             <TableHeader>Id</TableHeader>
-            <TableHeader>Nome</TableHeader>
+            <TableHeader>E-mail</TableHeader>
             <TableHeader>CPF</TableHeader>
             <TableHeader>Valor</TableHeader>
             <TableHeader>Data de Criação</TableHeader>
@@ -231,7 +193,7 @@ function Home(): React.ReactElement {
                   return (
                     <TableRow>
                       <TableCell>{item.id}</TableCell>
-                      <TableCell>{item.client.name}</TableCell>
+                      <TableCell>{item.client.email}</TableCell>
                       <TableCell>{item.client.social}</TableCell>
                       <TableCell>{item.amount}</TableCell>
                       <TableCell>{item.issueDate}</TableCell>
