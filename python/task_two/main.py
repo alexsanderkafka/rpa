@@ -30,7 +30,7 @@ r.close()
 
 #os.chdir('C:/Users/User/Documents/trabalho-rafael/rpa/python/task_two')
 
-colunms = ['id', 'email', 'cpf_cnpj', 'valor', 'data_criacao', 'status', 'data_vencimento', 'metodo_pagamento', 'codigo_barra']
+colunms = ['nome', 'email', 'cpf_cnpj', 'valor', 'telefone', 'status', 'data_vencimento', 'metodo_pagamento', 'codigo_barra']
 dados = pd.read_csv(csv_path, header=None, names=colunms)
 
 df = pd.DataFrame(dados)
@@ -39,17 +39,17 @@ print(df)
 
 for index, row in df.iterrows():
     print("\n---------------")
-    print(row['id'])
+    print(row['nome'])
     print(row['email'])
     print(row['cpf_cnpj'])
     print(row['valor'])
-    print(row['data_criacao'])
+    print(row['telefone'])
     print(row['status'])
     print(row['data_vencimento'])
     print(row['metodo_pagamento'])
     print(row['codigo_barra'])
     print("---------------\n")
-
+    
     invoice.generate_pdf(row)
 
 print("\n---FINAL PROCESSING---\n")

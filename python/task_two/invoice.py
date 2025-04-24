@@ -63,5 +63,8 @@ def generate_pdf(row: pd.Series):
     print(f"\nPDF gerado com sucesso: {pdf_path}")
 
     #send_email(pdf_path, row['email'])
-    email.send_email(pdf_path, 'erivelto.martins@aluno.fmpsc.edu.br') #Colocar o email
+    #str(row['email'])
+    
+
+    email.send_email(pdf_path, row) #Colocar o email
     

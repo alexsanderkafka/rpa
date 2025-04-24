@@ -8,6 +8,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.wp import send_message_wp
 
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(current_dir, '..', 'faturas.csv')
 
@@ -29,7 +30,6 @@ dados = pd.read_csv(csv_path, header=None, names=colunms)
 
 df = pd.DataFrame(dados)
 
-
 for index, row in df.iterrows():
     print("\n---------------")
     print(row['nome'])
@@ -45,4 +45,13 @@ for index, row in df.iterrows():
 
     send_message_wp(row)
 
+    df.at[index, 'status'] = 'Mensagem enviada'
+    df.at[index, 'metodo_pagamento'] = 'WhatsApp'
+
+df.to_csv(csv_path, index=False)
+
+print(df)
+
 print("---FINAL PROCESSING---")
+
+

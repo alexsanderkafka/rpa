@@ -176,11 +176,11 @@ function Home(): React.ReactElement {
         
         <Table>
           <thead>
-            <TableHeader>Id</TableHeader>
+            <TableHeader>Nome</TableHeader>
             <TableHeader>E-mail</TableHeader>
             <TableHeader>CPF</TableHeader>
             <TableHeader>Valor</TableHeader>
-            <TableHeader>Data de Criação</TableHeader>
+            <TableHeader>Telefone</TableHeader>
             <TableHeader>Status</TableHeader>
             <TableHeader>Data de Vencimento</TableHeader>
             <TableHeader>Método de Pagamento</TableHeader>
@@ -192,11 +192,11 @@ function Home(): React.ReactElement {
                 data.map((item) => {
                   return (
                     <TableRow>
-                      <TableCell>{item.id}</TableCell>
+                      <TableCell>{item.client.name}</TableCell>
                       <TableCell>{item.client.email}</TableCell>
                       <TableCell>{item.client.social}</TableCell>
                       <TableCell>{item.amount}</TableCell>
-                      <TableCell>{item.issueDate}</TableCell>
+                      <TableCell>{item.client.phone}</TableCell>
                       <TableCell>{item.status == 'PENDING' ? 'Pendente' : item.status}</TableCell>
                       <TableCell>{item.dueDate}</TableCell>
                       <TableCell>{item.paymentMethod}</TableCell>
@@ -215,18 +215,3 @@ function Home(): React.ReactElement {
 };
 
 export default Home;
-
-/* {
-              data.map((item) => 
-                <TableRow>
-                  <TableCell>{item.nome}</TableCell>
-                  <TableCell>{item.cpf}</TableCell>
-                  <TableCell>{item.valor}</TableCell>
-                  <TableCell>{item.dataVencimento}</TableCell>
-                  <TableCell>{item.status}</TableCell>
-                  <TableCell>{item.dataPagamento}</TableCell>
-                  <TableCell>{item.metodoPagamento}</TableCell>
-                  <TableCell>{item.codigoDeBarra}</TableCell>
-                </TableRow>
-              ))
-            }*/

@@ -104,6 +104,7 @@ export const TableRow = styled.tr`
 export const TableCell = styled.td`
   padding: 12px;
   border: 1px solid #ddd;
+  font-size: 14px;
 `;
 
 export const BaseContainer = styled.main`
